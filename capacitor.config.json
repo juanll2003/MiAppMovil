@@ -1,0 +1,9 @@
+{
+  "appId": "com.tiendaweb.miapp",
+  "appName": "TiendaWeb",
+  "webDir": "www",
+  "server": {
+    "url": "https://isatech.uy/tiendaweb",
+    "cleartext": true
+  }
+}

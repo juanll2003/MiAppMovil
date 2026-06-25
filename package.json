@@ -1,0 +1,28 @@
+{
+  "name": "miappmovil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanll2003/MiAppMovil.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/juanll2003/MiAppMovil/issues"
+  },
+  "homepage": "https://github.com/juanll2003/MiAppMovil#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/core": "^8.4.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.4.1"
+  }
+}
