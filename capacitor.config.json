@@ -1,5 +1,11 @@
 {
-  "appId": "com.tiendaweb.miapp",
-  "appName": "TiendaWeb",
-  "webDir": "www"
+  "appId": "com.laterraza.miapp",
+  "appName": "LaTerraza",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true
+  },
+  "server": {
+    "androidScheme": "https"
+  }
 }
