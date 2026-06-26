@@ -1,1 +1,86 @@
-<html><body>Cargando...</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#f5f5f5; }
+    #offline {
+      display:none;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+      padding:20px;
+    }
+    #offline.visible { display:flex; }
+    .card {
+      background:white;
+      border-radius:16px;
+      padding:40px 30px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+      max-width:320px;
+      width:100%;
+    }
+    .icono { font-size:64px; margin-bottom:20px; }
+    h1 { font-size:22px; color:#333; margin-bottom:10px; }
+    p { font-size:15px; color:#666; margin-bottom:30px; line-height:1.5; }
+    button {
+      background:#1a73e8;
+      color:white;
+      border:none;
+      padding:14px 32px;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      width:100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="offline">
+    <div class="card">
+      <div class="icono">📡</div>
+      <h1>Sin conexión</h1>
+      <p>Revisá tu conexión a internet e intentá de nuevo.</p>
+      <button onclick="reintentar()">🔄 Reintentar</button>
+    </div>
+  </div>
+
+  <script>
+    const APP_URL = 'https://isatech.uy/laterraza'; // ← tu URL real acá
+
+    function mostrarOffline() {
+      document.getElementById('offline').classList.add('visible');
+    }
+
+    function irALaApp() {
+      window.location.href = APP_URL;
+    }
+
+    function reintentar() {
+      if (navigator.onLine) {
+        irALaApp();
+      } else {
+        mostrarOffline();
+      }
+    }
+
+    // Al abrir la app
+    if (navigator.onLine) {
+      irALaApp();
+    } else {
+      mostrarOffline();
+    }
+
+    // Si pierde conexión mientras usa la app
+    window.addEventListener('offline', mostrarOffline);
+
+    // Si recupera conexión
+    window.addEventListener('online', irALaApp);
+  </script>
+
+</body>
+</html>

@@ -20,7 +20,8 @@
   "homepage": "https://github.com/juanll2003/MiAppMovil#readme",
   "dependencies": {
     "@capacitor/android": "^8.4.1",
-    "@capacitor/core": "^8.4.1"
+    "@capacitor/core": "^8.4.1",
+    "@capacitor/network": "^8.0.1"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.4.1"
